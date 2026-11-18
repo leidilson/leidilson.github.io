@@ -6,65 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Leidilson Mendes — Software Development & Creative Services.">
-
     <meta name="theme-color" content="#111111">
 
     <title>Leidilson Mendes | Links</title>
 
     <style>
+        /* RESET */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* PAGE */
         body {
             min-height: 100vh;
-            background: #111111;
+            min-height: 100svh;
+
+            background-color: #111111;
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.18),
+                    rgba(0, 0, 0, 0.18)
+                ),
+                url("6C16EB30-25A8-4953-8AC8-63F494A24E02.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+
             color: #f5f5f5;
             font-family: Arial, Helvetica, sans-serif;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             padding: 40px 20px;
         }
 
+        /* MAIN CONTAINER */
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 440px;
             text-align: center;
+        }
+
+        /* PROFILE */
+        .profile {
+            margin-bottom: 32px;
         }
 
         .avatar {
             display: block;
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
+            width: 112px;
+            height: 112px;
+
             object-fit: cover;
-            border: 2px solid #444444;
+            object-position: center;
+
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.65);
+
             margin: 0 auto 22px;
         }
 
         h1 {
             font-size: 28px;
-            margin-bottom: 9px;
+            font-weight: 700;
             letter-spacing: -0.8px;
+            margin-bottom: 10px;
         }
 
         .subtitle {
-            color: #a3a3a3;
+            color: #d0d0d0;
             font-size: 14px;
             line-height: 1.6;
             margin-bottom: 12px;
         }
 
         .tagline {
-            color: #737373;
-            font-size: 12px;
-            letter-spacing: 1px;
-            margin-bottom: 35px;
+            color: #999999;
+            font-size: 11px;
+            letter-spacing: 1.8px;
         }
 
+        /* SOCIAL LINKS */
         .links {
             display: flex;
             flex-direction: column;
@@ -72,52 +100,66 @@
         }
 
         .link {
-            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            position: relative;
+
             padding: 17px 35px;
-            border: 1px solid #383838;
+
+            background: rgba(10, 10, 10, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.28);
             border-radius: 10px;
+
             color: #f5f5f5;
             text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .link-title {
             font-size: 15px;
             font-weight: 600;
-            transition: 0.25s ease;
+        }
+
+        .link-description {
+            display: block;
+            margin-top: 5px;
+
+            color: #aaaaaa;
+            font-size: 12px;
+            font-weight: normal;
         }
 
         .link:hover {
             background: #f5f5f5;
-            color: #111111;
             border-color: #f5f5f5;
+            color: #111111;
             transform: translateY(-3px);
         }
 
-        .link span {
-            display: block;
-            margin-top: 5px;
-            font-size: 12px;
-            font-weight: normal;
-            color: #999999;
-        }
-
-        .link:hover span {
+        .link:hover .link-description {
             color: #555555;
         }
 
+        /* CONTACT */
         .contact {
             margin-top: 32px;
         }
 
         .contact-label {
-            color: #666666;
+            color: #999999;
             font-size: 10px;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.8px;
             margin-bottom: 10px;
         }
 
         .contact a {
-            color: #aaaaaa;
+            color: #e0e0e0;
             font-size: 13px;
             text-decoration: none;
             transition: color 0.25s ease;
@@ -125,31 +167,51 @@
 
         .contact a:hover {
             color: #ffffff;
+            text-decoration: underline;
         }
 
+        /* FOOTER */
         footer {
             margin-top: 35px;
-            color: #666666;
-            font-size: 12px;
+            color: #888888;
+            font-size: 11px;
         }
 
+        /* MOBILE */
         @media (max-width: 480px) {
             body {
                 padding: 35px 20px;
+            }
+
+            .container {
+                max-width: 380px;
+            }
+
+            .avatar {
+                width: 105px;
+                height: 105px;
             }
 
             h1 {
                 font-size: 25px;
             }
 
-            .avatar {
-                width: 100px;
-                height: 100px;
+            .subtitle {
+                font-size: 13px;
             }
 
             .link {
-                padding: 17px 20px;
                 min-height: 65px;
+                padding: 16px 20px;
+            }
+        }
+
+        /* REDUCED MOTION */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
             }
         }
     </style>
@@ -159,58 +221,82 @@
 
     <main class="container">
 
-        <img
-            class="avatar"
-            src="https://github.com/leidilson.png"
-            alt="Avatar de Leidilson Mendes"
-        >
+        <!-- PROFILE -->
+        <header class="profile">
 
-        <h1>Leidilson Mendes</h1>
+            <img
+                class="avatar"
+                src="https://github.com/leidilson.png"
+                alt="Avatar de Leidilson Mendes"
+            >
 
-        <p class="subtitle">
-            Software Development | Creative Services
-        </p>
+            <h1>Leidilson Mendes</h1>
 
-        <p class="tagline">
-            LEARNING. BUILDING. IMPROVING.
-        </p>
+            <p class="subtitle">
+                Software Development & Creative Services
+            </p>
 
+            <p class="tagline">
+                LEARNING. BUILDING. IMPROVING.
+            </p>
+
+        </header>
+
+        <!-- SOCIAL LINKS -->
         <nav class="links" aria-label="Redes sociais">
 
-            <a class="link"
-               href="https://github.com/leidilson"
-               target="_blank"
-               rel="noopener noreferrer">
-                GitHub
-                <span>Projetos e desenvolvimento</span>
+            <a
+                class="link"
+                href="https://github.com/leidilson"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span class="link-title">GitHub</span>
+                <span class="link-description">
+                    Projetos e desenvolvimento
+                </span>
             </a>
 
-            <a class="link"
-               href="https://www.linkedin.com/in/leidilson-mendes-01b365444/"
-               target="_blank"
-               rel="noopener noreferrer">
-                LinkedIn
-                <span>Perfil profissional</span>
+            <a
+                class="link"
+                href="https://www.linkedin.com/in/leidilson-mendes-01b365444/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span class="link-title">LinkedIn</span>
+                <span class="link-description">
+                    Perfil profissional
+                </span>
             </a>
 
-            <a class="link"
-               href="https://www.instagram.com/prodbyleh/"
-               target="_blank"
-               rel="noopener noreferrer">
-                Instagram
-                <span>Edição de vídeo e Motion Design</span>
+            <a
+                class="link"
+                href="https://www.instagram.com/prodbyleh/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span class="link-title">Instagram</span>
+                <span class="link-description">
+                    Edição de vídeo e Motion Design
+                </span>
             </a>
 
         </nav>
 
+        <!-- EMAIL -->
         <section class="contact">
-            <p class="contact-label">CONTACTO PROFISSIONAL</p>
+
+            <p class="contact-label">
+                CONTACTO PROFISSIONAL
+            </p>
 
             <a href="mailto:lehbusiness8@gmail.com">
                 lehbusiness8@gmail.com
             </a>
+
         </section>
 
+        <!-- FOOTER -->
         <footer>
             © 2026 Leidilson Mendes
         </footer>
