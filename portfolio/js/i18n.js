@@ -44,8 +44,8 @@ export const I18N = {
     'svc4.desc': 'Criação de cartazes, composições gráficas, materiais promocionais e peças visuais para redes sociais.',
 
     // Percurso
-'career.t1': 'O meu percurso',
-'career.t2': 'de aprendizagem',
+'career.t1': 'Aprendizagem',
+'career.t2': 'Desenvolvimento',
 
 'years.to': 'a',
 'years.until': 'até',
@@ -157,8 +157,8 @@ export const I18N = {
     'svc4.desc': 'Creating posters, graphic compositions, promotional materials and visual content for social media.',
 
     // Learning journey
-'career.t1': 'My learning',
-'career.t2': 'journey',
+'career.t1': 'Learning',
+'career.t2': 'Development',
 
 'years.to': 'to',
 'years.until': 'until',
@@ -276,8 +276,8 @@ export const I18N = {
     'svc4.desc': 'Creación de carteles, composiciones gráficas, materiales promocionales y piezas visuales para redes sociales.',
 
    // Trayectoria
-'career.t1': 'Mi trayectoria',
-'career.t2': 'de aprendizaje',
+'career.t1': 'Aprendizaje',
+'career.t2': 'Desarrollo',
 
 'years.to': 'a',
 'years.until': 'hasta',
